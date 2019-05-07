@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_deesco/authentication/authentication.dart';
 import 'package:flutter_deesco/deesco_graphql_client/main.dart';
 
-import '../generate.dart';
 
 class HomePage extends StatelessWidget {
   @override
