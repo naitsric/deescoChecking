@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:flutter_deesco/authentication/authentication.dart';
 import 'package:flutter_deesco/login/login.dart';
+import 'package:graphql_flutter/graphql_flutter.dart';
 
 class LoginForm extends StatefulWidget {
   final LoginBloc loginBloc;
@@ -79,9 +80,12 @@ class _LoginFormState extends State<LoginForm> {
   }
 
   _onLoginButtonPressed() {
+    GraphQLClient client = GraphQLProvider.of(context).value;
+
     _loginBloc.dispatch(LoginButtonPressed(
       username: _usernameController.text,
       password: _passwordController.text,
+      client: client
     ));
   }
 }

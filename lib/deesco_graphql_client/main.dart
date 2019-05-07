@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:graphql_flutter/graphql_flutter.dart';
 import 'dart:async';
 
 import 'package:barcode_scan/barcode_scan.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:graphql_flutter/graphql_flutter.dart';
 
 import '../graphql_operation/mutations/mutations.dart' as mutations;
 
@@ -16,34 +16,7 @@ class DeescoScanWidgetScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final HttpLink httpLink = HttpLink(
-      uri: 'http://192.168.1.127:4001/graphql',
-    );
-
-    final AuthLink authLink = AuthLink(
-      getToken: () async => 'Bearer $YOUR_PERSONAL_ACCESS_TOKEN',
-    );
-
-    // TODO don't think we have to cast here, maybe covariant
-    Link link = authLink.concat(httpLink as Link);
-    if (ENABLE_WEBSOCKETS) {
-      final WebSocketLink websocketLink = WebSocketLink(
-        url: 'ws://localhost:8080/ws/graphql',
-        config: SocketClientConfig(
-            autoReconnect: true, inactivityTimeout: Duration(seconds: 15)),
-      );
-
-      link = link.concat(websocketLink);
-    }
-
-    final ValueNotifier<GraphQLClient> client = ValueNotifier<GraphQLClient>(
-      GraphQLClient(
-        cache: OptimisticCache(
-          dataIdFromObject: typenameDataIdFromObject,
-        ),
-        link: link,
-      ),
-    );
+    ValueNotifier client = GraphQLProvider.of(context);
 
     return GraphQLProvider(
       client: client,

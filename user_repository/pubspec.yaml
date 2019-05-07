@@ -7,3 +7,5 @@ environment:
 
 dependencies:
   meta: ^1.1.6
+  graphql_flutter: ^1.0.0
+  flutter_keychain: ^1.0.0

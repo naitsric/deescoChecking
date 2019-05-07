@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:flutter_deesco/authentication/authentication.dart';
 import 'package:flutter_deesco/deesco_graphql_client/main.dart';
 import 'package:flutter_deesco/graphql_widget/main.dart';
@@ -12,12 +10,11 @@ import '../scan.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final AuthenticationBloc authenticationBloc =
-    BlocProvider.of<AuthenticationBloc>(context);
+    final AuthenticationBloc authenticationBloc = BlocProvider.of<AuthenticationBloc>(context);
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('QR Code Scanner & Generator'),
+        title: Text('Deesco.co'),
       ),
       body: Center(
           child:
@@ -99,20 +96,6 @@ class HomePage extends StatelessWidget {
               ),
             ],
           )
-      ),
-    );
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home'),
-      ),
-      body: Container(
-        child: Center(
-            child: RaisedButton(
-              child: Text('logout'),
-              onPressed: () {
-                authenticationBloc.dispatch(LoggedOut());
-              },
-            )),
       ),
     );
   }
