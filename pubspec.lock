@@ -9,12 +9,19 @@ packages:
     source: hosted
     version: "2.2.0"
   barcode_scan:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: barcode_scan
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.0.8"
+  bloc:
+    dependency: "direct main"
+    description:
+      name: bloc
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.12.0"
   boolean_selector:
     dependency: transitive
     description:
@@ -57,18 +64,32 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.2"
+  equatable:
+    dependency: "direct main"
+    description:
+      name: equatable
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.10"
   flutter:
     dependency: "direct main"
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_bloc:
+    dependency: "direct main"
+    description:
+      name: flutter_bloc
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.12.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
     source: sdk
     version: "0.0.0"
   graphql_flutter:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: graphql_flutter
       url: "https://pub.dartlang.org"
@@ -103,7 +124,7 @@ packages:
     source: hosted
     version: "0.12.5"
   meta:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: meta
       url: "https://pub.dartlang.org"
@@ -124,7 +145,7 @@ packages:
     source: hosted
     version: "1.6.2"
   path_provider:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: path_provider
       url: "https://pub.dartlang.org"
@@ -145,7 +166,7 @@ packages:
     source: hosted
     version: "1.1.0"
   qr_flutter:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: qr_flutter
       url: "https://pub.dartlang.org"
@@ -219,6 +240,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.6"
+  user_repository:
+    dependency: "direct main"
+    description:
+      path: user_repository
+      relative: true
+    source: path
+    version: "1.0.0+1"
   uuid:
     dependency: transitive
     description:

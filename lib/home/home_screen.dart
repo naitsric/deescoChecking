@@ -3,8 +3,8 @@ import 'package:flutter_deesco/scan.dart';
 import 'package:flutter_deesco/generate.dart';
 import 'package:flutter/rendering.dart';
 
-import 'deesco_graphql_client/main.dart';
-import 'graphql_widget/main.dart';
+import '../deesco_graphql_client/main.dart';
+import '../graphql_widget/main.dart';
 
 class HomeScreen extends StatelessWidget {
 
