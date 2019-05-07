@@ -46,27 +46,47 @@ class _LoginFormState extends State<LoginForm> {
         }
 
         return Form(
-          child: Column(
-            children: [
-              TextFormField(
-                decoration: InputDecoration(labelText: 'username'),
-                controller: _usernameController,
-              ),
-              TextFormField(
-                decoration: InputDecoration(labelText: 'password'),
-                controller: _passwordController,
-                obscureText: true,
-              ),
-              RaisedButton(
-                onPressed:
-                state is! LoginLoading ? _onLoginButtonPressed : null,
-                child: Text('Login'),
-              ),
-              Container(
-                child:
-                state is LoginLoading ? CircularProgressIndicator() : null,
-              ),
-            ],
+          child:
+          Center(
+            child: Column(
+//              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Padding(
+                    padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+                    child:
+                    TextFormField(
+                      decoration: InputDecoration(labelText: 'email'),
+                      controller: _usernameController,
+                    )
+                ),
+                Padding(
+                    padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+                    child:
+                    TextFormField(
+                      decoration: InputDecoration(labelText: 'password'),
+                      controller: _passwordController,
+                      obscureText: true,
+                    )
+                ),
+                Padding(
+                    padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+                    child:
+                    RaisedButton(
+                      onPressed:
+                      state is! LoginLoading ? _onLoginButtonPressed : null,
+                      child: Text('Ingresar'),
+                    )
+                ),
+                Padding(
+                    padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+                    child:
+                    Container(
+                      child:
+                      state is LoginLoading ? CircularProgressIndicator() : null,
+                    )
+                ),
+              ],
+            ),
           ),
         );
       },
@@ -83,9 +103,9 @@ class _LoginFormState extends State<LoginForm> {
     GraphQLClient client = GraphQLProvider.of(context).value;
 
     _loginBloc.dispatch(LoginButtonPressed(
-      username: _usernameController.text,
-      password: _passwordController.text,
-      client: client
+        username: _usernameController.text,
+        password: _passwordController.text,
+        client: client
     ));
   }
 }

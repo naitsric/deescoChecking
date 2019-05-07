@@ -110,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
             if (result.data['action'] != null){
               wellcomeString = 'Bienvenid@, ${result.data['action']['person']['name']}';
             }
-            setState(() => this.barcode = 'Bienvenida, $wellcomeString');
+            setState(() => this.barcode = '$wellcomeString');
           }
           print(result);
         },
