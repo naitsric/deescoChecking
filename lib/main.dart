@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_keychain/flutter_keychain.dart';
 import 'package:user_repository/user_repository.dart';
 
 import 'package:flutter_deesco/authentication/authentication.dart';
@@ -18,7 +19,15 @@ void main() {
   );
 
   final AuthLink authLink = AuthLink(
-    getToken: () async => '',
+    getToken: () async {
+      String varToken = '';
+      var token = await FlutterKeychain.get(key: "token");
+      if (token != null){
+        varToken = token;
+      }
+
+      return varToken;
+    },
   );
 
   // TODO don't think we have to cast here, maybe covariant

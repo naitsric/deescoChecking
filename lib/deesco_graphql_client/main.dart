@@ -7,8 +7,6 @@ import 'package:graphql_flutter/graphql_flutter.dart';
 
 import '../graphql_operation/mutations/mutations.dart' as mutations;
 
-const String YOUR_PERSONAL_ACCESS_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjanV5Y2d5Y3MwMDN0MDg1OHgzczNwamc2IiwiaWF0IjoxNTU2ODk5NzQxfQ.pUEZsCcF1iMUXv3RVR5aXhTLhcTdSaI0G_ErTmX-cQA';
-
 const bool ENABLE_WEBSOCKETS = false;
 
 class DeescoScanWidgetScreen extends StatelessWidget {
@@ -58,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: (RunMutation toggleCheckIn, QueryResult result) {
           return Scaffold(
               appBar: new AppBar(
-                title: new Text('QR Code Scanner'),
+                title: new Text('Scanear código'),
               ),
               body: new Center(
                 child: new Column(
