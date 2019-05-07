@@ -97,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               setState(() => this.barcode = 'Unknown error: $e');
                             }
                           },
-                          child: const Text('START CAMERA SCAN')
+                          child: const Text('Iniciar Camara')
                       ),
                     )
                     ,

@@ -21,7 +21,7 @@ class _ScanState extends State<ScanScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: new AppBar(
-          title: new Text('QR Code Scanner'),
+          title: new Text('Buscando QR'),
         ),
         body: new Center(
           child: new Column(
@@ -35,7 +35,7 @@ class _ScanState extends State<ScanScreen> {
                     textColor: Colors.white,
                     splashColor: Colors.blueGrey,
                     onPressed: scan,
-                    child: const Text('START CAMERA SCAN')
+                    child: const Text('Iniciar Scan')
                 ),
               )
               ,

@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Deesco.co'),
+        title: Text('Deesco Checkin APP'),
       ),
       body: Center(
           child:
@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
                     onPressed: () {
                       authenticationBloc.dispatch(LoggedOut());
                     },
-                    child: const Text('logout')
+                    child: const Text('Salir')
                 ),
               ),
             ],
