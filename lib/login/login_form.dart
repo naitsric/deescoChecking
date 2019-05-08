@@ -49,8 +49,16 @@ class _LoginFormState extends State<LoginForm> {
           child:
           Center(
             child: Column(
-//              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Padding(
+                    padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+                    child:
+                    Text(
+                        "Bienvenido a DEESCO.co!!",
+                      textScaleFactor: 1.4,
+                    )
+                ),
                 Padding(
                     padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
                     child:

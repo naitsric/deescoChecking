@@ -15,7 +15,7 @@ import 'package:graphql_flutter/graphql_flutter.dart';
 
 void main() {
   final HttpLink httpLink = HttpLink(
-    uri: 'http://192.168.1.110:4001/graphql',
+    uri: 'http://192.168.1.127:4001/graphql',
   );
 
   final AuthLink authLink = AuthLink(
@@ -84,6 +84,12 @@ class _AppState extends State<MyApp> {
     return BlocProvider<AuthenticationBloc>(
       bloc: _authenticationBloc,
       child: MaterialApp(
+        title: 'Deesco checker app',
+        theme: new ThemeData(
+          primarySwatch: Colors.purple,
+          accentColor: Colors.purpleAccent,
+          brightness: Brightness.dark,
+        ),
         home: BlocBuilder<AuthenticationEvent, AuthenticationState>(
           bloc: _authenticationBloc,
           builder: (BuildContext context, AuthenticationState state) {

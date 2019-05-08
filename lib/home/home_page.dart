@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Deesco Checkin APP'),
+        title: Text('DEESCO.co'),
       ),
       body: Center(
           child:
@@ -52,9 +52,9 @@ class HomePage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
                 child: RaisedButton(
-                    color: Colors.blue,
-                    textColor: Colors.white,
-                    splashColor: Colors.blueGrey,
+//                    color: Colors.blue,
+//                    textColor: Colors.white,
+//                    splashColor: Colors.blueGrey,
                     onPressed: () {
                       authenticationBloc.dispatch(LoggedOut());
                     },

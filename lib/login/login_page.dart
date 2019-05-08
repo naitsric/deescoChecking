@@ -36,12 +36,17 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Ingresar'),
-      ),
-      body: LoginForm(
-        authenticationBloc: _authenticationBloc,
-        loginBloc: _loginBloc,
+      body: new Container(
+        decoration: new BoxDecoration(
+          image: new DecorationImage(
+            image: new AssetImage("assets/bg/landon-martin-325811-unsplash.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: LoginForm(
+          authenticationBloc: _authenticationBloc,
+          loginBloc: _loginBloc,
+        )
       ),
     );
   }
