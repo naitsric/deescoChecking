@@ -46,8 +46,8 @@ class UserRepository {
 
   Future<bool> hasToken() async {
     var value = await FlutterKeychain.get(key: "token");
-    bool bol = true;
-    if(value  == null){
+    bool bol = false;
+    if(value  != null){
       bol = true;
     }
     return bol;
