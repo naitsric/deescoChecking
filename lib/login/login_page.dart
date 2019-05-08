@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -39,14 +41,22 @@ class _LoginPageState extends State<LoginPage> {
       body: new Container(
         decoration: new BoxDecoration(
           image: new DecorationImage(
-            image: new AssetImage("assets/bg/landon-martin-325811-unsplash.jpg"),
+            image: new AssetImage("assets/bg/emmanuel-1234152-unsplash.jpg"),
             fit: BoxFit.cover,
           ),
+          color: Colors.grey.shade200.withOpacity(0.5),
         ),
-        child: LoginForm(
-          authenticationBloc: _authenticationBloc,
-          loginBloc: _loginBloc,
+        child: new BackdropFilter(
+          filter: new ImageFilter.blur(sigmaX: 2.0, sigmaY: 2.0),
+          child: new Container(
+            decoration: new BoxDecoration(color: Colors.black.withOpacity(0.2)),
+            child: LoginForm(
+              authenticationBloc: _authenticationBloc,
+              loginBloc: _loginBloc,
+            )
+          ),
         )
+
       ),
     );
   }

@@ -15,7 +15,7 @@ import 'package:graphql_flutter/graphql_flutter.dart';
 
 void main() {
   final HttpLink httpLink = HttpLink(
-    uri: 'http://192.168.1.127:4001/graphql',
+    uri: 'https://graphql.deesco.co/graphql',
   );
 
   final AuthLink authLink = AuthLink(

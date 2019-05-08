@@ -56,6 +56,11 @@ flutter:
   assets:
     - assets/
     - assets/bg/landon-martin-325811-unsplash.jpg
+    - assets/bg/fabio-633881-unsplash.jpg
+    - assets/bg/yvette-de-wit-118721-unsplash.jpg
+    - assets/bg/kevin-horstmann-253675-unsplash.jpg
+    - assets/bg/romina-veliz-1129826-unsplash.jpg
+    - assets/bg/emmanuel-1234152-unsplash.jpg
 #    - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
